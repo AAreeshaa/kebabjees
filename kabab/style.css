@@ -6,15 +6,16 @@
   box-sizing: border-box;
   font-family: "Oswald", sans-serif;
   scroll-behavior: smooth;
+
+
 }
 
 .wrapper {
   max-width: 1800px;
   margin: auto;
-  background-color: cadetblue;
+  background-color: rgb(143, 170, 170);
 }
 
-/* ------------- landing-page ------------------ */
 .landing-video {
   height: 700px;
   width: 100%;
@@ -27,7 +28,7 @@
   opacity: 1;
 }
 
-/* ------------- navbar ------------------ */
+
 nav {
   height: 700px;
   position: sticky;
@@ -131,7 +132,7 @@ nav a:hover {
 
   .landing-title {
     font-size: 2rem;
-      padding: 0.6rem;   
+    padding: 0.6rem;
   }
 }
 
@@ -218,116 +219,142 @@ nav a:hover {
 
 
 
-.back-1 {
-  background: rgba(229, 223, 223, 0.7) url("./Images/back1.jpg");
+.container {
+  text-align: center;
+  margin: 0%;
+  background: rgba(229, 223, 223, 0.7) url("back1.jpg");
   background-size: cover;
+  padding: 0%;
   background-blend-mode: darken;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  scroll-behavior: smooth;
 }
 
-h1 {
-  text-align: center;
-  color: white;
-  padding-top: 10px;
+.container h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #faf7f7;
 }
 
 .line {
-  margin: auto;
-  background-color: #dcb658;
-  height: 3px;
-  width: 150px;
+  width: 200px;
+  height: 4px;
+  background-color: #ff5722;
+  margin: 0 auto 15px auto;
 }
 
-p {
-  color: white;
-  font-size: 1.3rem;
-  text-align: center;
+h6 {
+  font-size: 24px;
+  color: #f5f4f4;
+  margin-bottom: 20px;
+
+}
+
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-top: 80px;
 }
 
 .slider-wrapper {
-  overflow: hidden;
-  max-width: 1100px;
-  margin: 0 70px 55px;
-}
-
-.card-list .card-item {
-  color: #fff;
-  user-select: none;
-  /* width: 350px; */
-  height: 350px;
-  padding: 35px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  backdrop-filter: blur(30px);
-  background: rgba(255, 255, 255, 0.2);
-  border: 3px solid #6c6868;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  
+  scrollbar-width: none;
 }
 
-.card-list .card-item .food-image {
-  width: 260px;
-  height: 260px;
-  border-radius: 7%;
-  margin-bottom: 40px;
-  padding: 4px;
-  margin: 14px;
+.image-list {
+  display: flex;
+  flex-wrap: nowrap;
+
 }
 
-.card-list .card-item .order-online {
-  font-size: 1.25rem;
-  padding: 8px 8px;
-  color: #030728;
-  font-weight: 300;
-  background: #dcb658;
-  margin-bottom: 30px;
-  border: 1px solid transparent;
-  transition: 0.2s ease;
+.image-item {
+  flex-shrink: 0;
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  
+  margin: 0 5px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
-.slider-wrapper .swiper-pagination-bullet {
-  background: #fff;
-  height: 10px;
-  width: 7px;
-}
-
-.slider-wrapper .swiper-slide-button {
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: #fff;
-  margin-top: -50px;
-  transition: 0.2s ease;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+  display: none;
 }
 
-.slider-wrapper .swiper-slide-button:hover {
-  color: #3b3c453e;
-
+.prev-btn {
+  left: 10px;
 }
 
-@media(max-width:768px) {
-  .slider-wrapper {
-    margin: 0 10px 40px;
+.next-btn {
+  right: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .image-item {
+    width: 200px;
+    height: 150px;
   }
-} 
+
+  .slider-btn {
+    padding: 8px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    width: 150px;
+    height: 100px;
+  }
+}
 
 
+
+.container-fluid {
+
+  overflow: hidden;
+  display: flex;
+
+}
 
 
 .call {
-  height: 170px;
-  background-color: rgb(15, 15, 15);
+  height: 200px;
+background-blend-mode: darken;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: center;
+  justify-items: center;
+
 }
 
-.call h1 {
-  color: #dcb658;
+h2 {
+  color: #f1efef;
+  font-weight: bolder;
+  font-size: 40px;
+  align-items: baseline;
+
 }
 
 .call h1:hover {
@@ -337,15 +364,42 @@ p {
 }
 
 .call p {
-  color: #676565;
+  color: #eee8e8;
+  font-size: 26px;
+}
+
+.call-container {
+  text-align: center;
+  margin: 20px 0;
+  background-color: #0e0d0d;
+  background-size: cover;
+  background-blend-mode: darken;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0%;
+  margin-bottom: 10px;
+
+
+}
+
+.container-fluid {
+  background-size: cover;
+  background-image: url("16.jpg");
+  background-blend-mode: darken;
+  height: 70vh;
+  overflow: hidden;
+  display: flex;
+  padding: 0%;
+  margin: 0%;
 }
 
 .btn {
-  width: 10%;
+  width: 13%;
   padding: 7px;
   margin: auto;
   background-color: #dcb658;
   cursor: pointer;
+  margin-bottom: auto;
 }
 
 .btn:hover {
@@ -359,18 +413,6 @@ p {
   }
 }
 
-
-
-.back-2 {
-  background-image: url("./Images/16.jpg");
-  background-size: cover;
-  background-blend-mode: darken;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 
 .gallery {
@@ -408,7 +450,7 @@ p {
   background-image: radial-gradient(ellipse at center,
       rgba(0, 0, 0, 0.57) 0%,
       rgba(0, 0, 0, 0.87) 100%),
-    url(./Images/back3.jpg);
+    url(back3.jpg);
   height: unset;
 }
 
@@ -516,7 +558,7 @@ p {
   }
 }
 
-/* locations */
+
 .location {
   background-color: #1b1b1b;
 }
